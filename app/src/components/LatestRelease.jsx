@@ -2,7 +2,7 @@ import {Row, Card, Col, Button} from 'react-bootstrap'
 import data from './data/scifi.json'
 
 const LatestRelease = () =>(
-    <Row xs={1} md={3} xl={5} className="g-4 mx-2">
+    <Row xs={1} md={3} xl={5} className="mx-2">
         {
             data.map(book => (
                 <Col className="mb-3">
@@ -11,11 +11,13 @@ const LatestRelease = () =>(
                 <Card.Body>
                 <Card.Title>{book.title}</Card.Title>
                 <Card.Text>
-                    £{book.price}
+                    <h4><b>£{book.price}</b></h4>
                 </Card.Text>
+                
                 </Card.Body>
                 <Card.Footer>
-                <small className="text-muted">{book.asin}</small>
+                <Button className="purchaseButton" variant="success"><span className="iconify mr-2 mb-1" data-icon="fa-solid:shopping-basket" data-width="15" data-height="15"></span>Purchase</Button>{' '}
+                <small className="text-muted d-block">#{book.asin}</small>
                 </Card.Footer>
             </Card>
             </Col>
