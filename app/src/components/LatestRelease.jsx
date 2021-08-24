@@ -5,13 +5,13 @@ const LatestRelease = () =>(
     <Row xs={1} md={3} xl={5} className="mx-2">
         {
             data.map(book => (
-                <Col className="mb-3">
+                <Col key={book.asin} className="mb-3">
                 <Card className=" mx-1 mb-1 h-100">
                 <Card.Img variant="top" src={book.img} />
                 <Card.Body>
                 <Card.Title>{book.title}</Card.Title>
-                <Card.Text>
-                    <h4><b>£{book.price}</b></h4>
+                <Card.Text className="priceText">
+                    £{book.price}
                 </Card.Text>
                 
                 </Card.Body>
