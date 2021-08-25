@@ -2,7 +2,7 @@ import {Row, Card, Col, Button} from 'react-bootstrap'
 import data from './data/scifi.json'
 
 const LatestRelease = () =>(
-    <Row xs={1} md={3} xl={5} className="mx-2">
+    <Row xs={1} md={3} lg={3} xl={5} className="mx-2">
         {
             data.map(book => (
                 <Col key={book.asin} className="mb-3">
